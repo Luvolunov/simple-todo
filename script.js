@@ -43,7 +43,10 @@ function createGoal(goal) {
     const goalElement = document.createElement('div');
     const deleteGoalButton = document.createElement('div');
     const text = document.createElement('span');
-    text.textContent = (goal.name + ': ' + goal.description).slice(0, 20);
+    const view = goal.description
+        ? goal.name + ': ' + goal.description
+        : goal.name;
+    text.textContent = view.slice(0, 20);
     deleteGoalButton.innerHTML = '&times;';
     deleteGoalButton.className = 'delete-goal';
     deleteGoalButton.setAttribute('data-delete-goal', goal.id);
