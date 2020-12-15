@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+    <title>Задачи</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Задачи</h1>
+        <button class="add-goal" data-show-modal>+</button>
+    </header>
+    <main id="content" class="content">
+    </main>
+    <footer class="footer">© Luvolunov, 2020</footer>
+
+
+    <div class="modal-background" id="modal-background" data-close-modal>
+        <form id="goal-form" class="modal-window" onsubmit="return false;">
+            <h2>Добавить цель</h2>
+            <br />
+            <input name="name" class="textfield" type="text" placeholder="Название цели...">
+            <br />
+            <textarea name="description" class="textarea" rows="2" placeholder="Описание..."></textarea>
+            <br />
+            <div>
+                <button type="button" class="modal-add-goal" data-add-goal>Добавить</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
